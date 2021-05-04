@@ -100,7 +100,7 @@ JavaBlog
     ├── index.jsp  
     ├── about.jsp  
     ├── project.jsp  
-    ├── robots.txt
+    ├── robots.txt  
     ├── search.jsp  
     ├── tag.jsp  
     ├── archive.jsp  
