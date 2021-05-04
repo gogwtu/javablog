@@ -1,2 +1,0 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<iframe frameborder="0" scrolling="no" src="http://show.v.t.qq.com/index.php?c=show&a=index&n=yuyastudent&w=0&h=348&fl=2&l=30&o=17&co=0" width="100%" height="348"></iframe>
