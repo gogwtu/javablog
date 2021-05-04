@@ -197,7 +197,7 @@ JavaBlog
     │   │   ├── login.css  
     │   │   └── profile.css  
     │   ├── images  
-    │   │   └── icons.png
+    │   │   └── icons.png  
     │   └── js  
     │       ├── account.js  
     │       ├── admin.js  
