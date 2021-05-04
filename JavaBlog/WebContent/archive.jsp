@@ -32,20 +32,27 @@
 				</h2>
 				<%
 					for (int i = 0; i < al.size(); i++) {
-							ArticleBean ab = al.get(i);
-							String date = sdf.format(ab.getDate()).substring(0, 7);
+						ArticleBean ab = al.get(i);
+						String date = sdf.format(ab.getDate()).substring(0, 7);
 				%>
 				<h2 class="archivedate"><%=date%></h2>
 				<ol class="archive">
-					<%
-						while (i < al.size() && sdf.format(ab.getDate()).contains(date)) {
-						ab = al.get(i++);
-					%>
 					<li>
 						<a href="article/<%=ab.getArticleId()%>/"><%=ab.getTitle()%></a>
 					</li>
 					<%
-								}
+						while ((++i) < al.size()){
+							ab = al.get(i);
+							if (sdf.format(ab.getDate()).contains(date)){
+						%>
+							<li>
+								<a href="article/<%=ab.getArticleId()%>/"><%=ab.getTitle()%></a>
+							</li>
+						<%
+							} else {
+								break;
+							}
+						}
 					%>
 				</ol>
 				<%
