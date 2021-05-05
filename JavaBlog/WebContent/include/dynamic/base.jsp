@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta http-equiv="Content-Language" content="zh-CN" />
 <meta name="robots" content="all" />
-<meta name="description" content="LeftGeek,计算机,博客"/>
+<meta name="description" content="JavaBlog,计算机,博客"/>
 <meta http-equiv="keywords" content="code"/>
-<meta name="author" content="leftgeek.com" />
+<meta name="author" content="JavaBlog" />
 <link rel="icon" type="image/png" id="favicon" href="images/logo.png"/>

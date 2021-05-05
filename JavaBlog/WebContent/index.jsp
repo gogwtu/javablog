@@ -6,7 +6,7 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/blog.css" />
-		<title>Abstracts&nbsp;-&nbsp;LeftGeek</title>
+		<title>Abstracts&nbsp;-&nbsp;JavaBlog</title>
 	</head>
 	<body onload="scrollInit();">
 		<div id="header">
