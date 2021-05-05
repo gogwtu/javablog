@@ -2,8 +2,9 @@
 <div id="searchdiv">
 	<form action="search" method="get" onsubmit="return search()">
 		<input name="q" type="text" id="searchText"
-			autocomplete="off" spellcheck="false"
-			placeholder="Search articles..." />
+		value="Search Site..." autocomplete="off" spellcheck="false"
+			onfocus="onFocus(this,'Search Site...')"
+			onblur="onBlur(this,'Search Site...')" />
 		<input id="go" type="image" src="images/search.png" />
 	</form>
 </div>

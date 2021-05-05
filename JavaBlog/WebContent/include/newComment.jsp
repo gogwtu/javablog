@@ -29,29 +29,29 @@
 	<div class="left">
 		<div style="display:<%=display %>" id="newinfo">
 			<div>
-				<input type="text" class="left input" id="name" placeholder="Name"/>
-				<label class="right label"><font class="strong" title="Can't be empty">*</font>&nbsp;(1&le;length&lt;32)</label>
+				<input type="text" class="left input" id="name"/>
+				<label class="right label"><font class="strong" title="Can't be empty">*</font>&nbsp;Name(&lt;32)</label>
 			</div>
 			<div>
-				<input type="text" class="left input" id="email" placeholder="Email"/>
-				<label class="right label"><font class="strong" title="Can't be empty">*</font>&nbsp;(1&le;length&lt;256)</label>
+				<input type="text" class="left input" id="email"/>
+				<label class="right label"><font class="strong" title="Can't be empty">*</font>&nbsp;Email(&lt;128,won't be published)</label>
 			</div>
 			<div>
-				<input type="text" class="left input" id="url" placeholder="Homepage"/>
-				<label class="right label">&nbsp;&nbsp;(0&le;length&lt;256)</label>
+				<input type="text" class="left input" id="url"/>
+				<label class="right label">&nbsp;&nbsp;&nbsp;Homepage(&lt;256)</label>
 			</div>
 		</div>
 		<div id="contentbox">
-			<textarea id="content" placeholder="Comment"></textarea>
+			<textarea id="content"></textarea>
 		</div>
 		<div id="submitbox">
 			<span>
 				<input class="button" id="submit" type="button" onclick="addComment(<%=articleId %>)" value="Post Comment" />
 			</span>
-			<span id="submitmsg">(1&le;length&lt;512)</span>
+			<span id="submitmsg">(&lt;512)</span>
 		</div>
 	</div>
-	<div class="right">
-		<img class="avatar" src="<%=avatarUrl %>" alt="Avatar" />
+	<div class="right avatar">
+		<img src="<%=avatarUrl %>" alt="Avatar" />
 	</div>
 </form>

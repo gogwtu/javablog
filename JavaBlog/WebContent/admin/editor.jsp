@@ -131,6 +131,6 @@
 		</table>
 	</div>
 </div>
-<div id="textareaframe">
+<div id="editorframe_box">
 	<iframe id="editframe" src="admin/blank.jsp"></iframe>
 </div>

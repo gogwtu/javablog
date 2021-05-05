@@ -83,7 +83,7 @@ function adjustBright(){
 		main.style.color = "#000000";
 		//sidebar.style.backgroundColor = "#FFFFFF";
 		light.setAttribute("value", "0");
-		light.src = "images/light_on.png";
+		light.src = "images/light_off.png";
 		light.title = "turn off the light";
 	} else {
 		bd.style.backgroundColor = "#333333";
@@ -93,7 +93,7 @@ function adjustBright(){
 		main.style.color = "#FDFDFD";
 		//sidebar.style.backgroundColor = "#333333";
 		light.setAttribute("value", "1");
-		light.src = "images/light_off.png";
+		light.src = "images/light_on.png";
 		light.title = "turn on the light";
 	}
 }

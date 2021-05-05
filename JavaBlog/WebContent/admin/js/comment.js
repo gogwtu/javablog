@@ -5,11 +5,11 @@ CommentList.prototype.setArticleId=function(articleId){
 CommentList.prototype.getArticleId=function(){
 	return this.articleId;
 };
-CommentList.prototype.setStatus=function(status){
-	this.status=status;
+CommentList.prototype.setStatus=function(status1){
+	this.status1=status1;
 };
 CommentList.prototype.getStatus=function(){
-	return this.status;	
+	return this.status1;	
 };
 CommentList.prototype.setPageNow=function(pageNow){
 	this.pageNow=pageNow;
@@ -56,12 +56,12 @@ CommentList.prototype.sort=function(attribute){
 	}
 	this.loadData();
 };
-CommentList.prototype.filter = function(status){
-	this.status = status;
+CommentList.prototype.filter = function(status1){
+	this.status1 = status1;
 	this.loadData();
 };
 CommentList.prototype.getCommentList=function(){
-	var url="admin/CommentList?articleId="+this.articleId+"&status="+this.status+"&pageNow="+this.pageNow+"&attribute="+this.attribute+"&order="+this.order;
+	var url="admin/CommentList?articleId="+this.articleId+"&status="+this.status1+"&pageNow="+this.pageNow+"&attribute="+this.attribute+"&order="+this.order;
 	window.location.href=url;
 };
 CommentList.prototype.loadData=function(){

@@ -8,6 +8,8 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javablog.util.ConfigProperty;
+
 public class MessageBeanBo extends ModelCtrl {
 
 	public MessageBeanBo(Connection connection) {
@@ -192,7 +194,7 @@ public class MessageBeanBo extends ModelCtrl {
 	// 修改信息状态函数
 	public boolean changeStatus(int messageId, int status) {
 		boolean result = false;
-		if (status == 0 || status == 1 || status == 2) {
+		if (status == ConfigProperty.STATUS_UNREAD || status == ConfigProperty.STATUS_READ) {
 			String sql = "UPDATE messages SET status=" + status
 					+ " WHERE message_id=" + messageId;
 			result = this.update(sql);
@@ -203,7 +205,7 @@ public class MessageBeanBo extends ModelCtrl {
 	// 修改信息状态函数
 	public boolean changeStatus(String messageIds, int status) {
 		boolean result = false;
-		if (status == 0 || status == 1 || status == 2) {
+		if (status == ConfigProperty.STATUS_UNREAD || status == ConfigProperty.STATUS_READ) {
 			String sql = "UPDATE messages SET status=" + status
 					+ " WHERE message_id IN(" + messageIds + ")";
 			result = this.update(sql);

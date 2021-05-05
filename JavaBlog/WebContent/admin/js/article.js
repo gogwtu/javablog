@@ -17,11 +17,11 @@ ArticleList.prototype.setTagId=function(tagId){
 ArticleList.prototype.getTagId=function(){
 	return this.tagId;
 };
-ArticleList.prototype.setStatus=function(status){
-	this.status=status;
+ArticleList.prototype.setStatus=function(status1){
+	this.status1=status1;
 };
 ArticleList.prototype.getStatus=function(){
-	return this.status;	
+	return this.status1;	
 };
 ArticleList.prototype.setPageNow=function(pageNow){
 	this.pageNow=pageNow;
@@ -69,8 +69,8 @@ ArticleList.prototype.sort=function(attribute){
 	this.loadData();
 };
 
-ArticleList.prototype.filter = function(status){
-	this.status = status;
+ArticleList.prototype.filter = function(status1){
+	this.status1 = status1;
 	this.loadData();
 };
 
@@ -78,7 +78,7 @@ ArticleList.prototype.getArticleList=function(){
 	var url="admin/ArticleList?categoryId=" +this.categoryId
 		+"&authorId="+this.authorId
 		+"&tagId="+this.tagId
-		+"&status="+this.status
+		+"&status="+this.status1
 		+"&pageNow="+this.pageNow
 		+"&attribute="+this.attribute
 		+"&order="+this.order;

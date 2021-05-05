@@ -10,7 +10,7 @@
 	<div class="boxtitle">
 		Categories
 	</div>
-	<div class="boxcontent">
+	<div class="boxcontent category_list">
 		<jsp:include page="categoryList.jsp"></jsp:include>
 	</div>
 </div>
@@ -18,7 +18,7 @@
 	<div class="boxtitle">
 			Recent Posts
 		</div>
-		<div class="boxcontent">
+		<div class="boxcontent post_list">
 			<jsp:include page="titleList.jsp">
 				<jsp:param value="6" name="count" />
 				<jsp:param value="article_id" name="attribute" />
@@ -29,7 +29,7 @@
     <div class="boxtitle">
         Tags
     </div>
-    <div class="boxcontent">
+    <div class="boxcontent tag_list">
         <jsp:include page="tagList.jsp"></jsp:include>
     </div>
 </div>
@@ -37,7 +37,7 @@
 	<div class="boxtitle">
 		Recent Comments
 	</div>
-	<div class="boxcontent">
+	<div class="boxcontent comment_list">
 		<jsp:include page="recentComment.jsp">
 			<jsp:param value="6" name="count" />
 		</jsp:include>
@@ -47,7 +47,7 @@
 	<div class="boxtitle">
 		Links
 	</div>
-	<div class="boxcontent">
+	<div class="boxcontent link_list">
 		<jsp:include page="linkList.jsp"></jsp:include>
 	</div>
 </div>

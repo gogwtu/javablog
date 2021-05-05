@@ -16,7 +16,7 @@
 <html>
 	<head>
 		<jsp:include page="admin-base.jsp"></jsp:include>
-		<title>FreeCody</title>
+		<title>LeftGeek</title>
 		<link rel="stylesheet" type="text/css" href="admin/css/index.css" />
 		<script type="text/javascript" src="admin/js/admin.js"></script>
 		<script type="text/javascript" src="admin/js/index.js"></script>
@@ -24,7 +24,7 @@
 	<body>
 		<div id="head">
 			<div id="logo">
-				<a href="admin/start.jsp" target="content">FreeCody</a>
+				<a href="admin/start.jsp" target="content">LeftGeek</a>
 			</div>
 			<div id="set">
 				<label>Welcome:<%=ub.getName() %></label>

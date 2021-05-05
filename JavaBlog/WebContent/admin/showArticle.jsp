@@ -78,19 +78,13 @@ java.text.SimpleDateFormat"%>
 		</div>
 		<div>
 			<input class="button" type="button" onclick="javascript:history.back()" value="返回"/>
-			<%
-				if (ab.getStatus() != ConfigProperty.STATUS_TRASH){//we can't edit articles in trash
-			%>
 			<a href="admin/newArticle.jsp?articleId=<%=ab.getArticleId()%>">Edit</a>
-			<%
-				}
-			%>
 			<a href="javascript:void(0)" onclick="deleteData(<%=ab.getArticleId()%>,4)">Delete</a>
 		</div>
 		<div id="main">
 		<div class="article">
 			<h2><%=ab.getTitle() %></h2>
-			<div><%=sdf.format(ab.getDate()) %></div>
+			<div>发表时间:<%=sdf.format(ab.getDate()) %></div>
 			<div><%=ab.getContent() %></div>
 		</div>
 		<%
@@ -101,24 +95,22 @@ java.text.SimpleDateFormat"%>
 		<div>
 		    Totally <%=al.size() %> Comments
 		</div>
-		<div id="commentlist">
+		<div id="comment_list">
 			<ul>
 			<%
 				CommentBean cb;
-				int uid = 0;
 				for(int i = 0; i< al.size(); i++){
 				 	cb = al.get(i);
-				 	uid = cb.getUserId() == 0? 0: 1;
 			%>
-			<li class="comment<%=uid %>">
+			<li class="comment<%=cb.getUserId() %>">
 				<div class="userinfo">
-					<div class="name">
+					<div class="username">
 						<a href="<%=cb.getUrl()%>" target="blank"><%=cb.getName()%></a>
 					</div>
 					<div class="avatar">
 						<img src="images/avatar.png" alt="avatar" />
 					</div>
-				</div>
+					</div>
 				<div class="commentinfo">
 					<div class="reply">
 						<div class="left"><%=sdf.format(cb.getDate()) %></div>

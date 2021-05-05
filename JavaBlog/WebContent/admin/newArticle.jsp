@@ -50,13 +50,13 @@ javablog.bean.TagBean,javablog.bean.TagBeanBo,javablog.bean.ArticleTagBeanBo
 	</head>
 	<body onload="onLoad('contentText')">
 		<div class="titlebar">
-			Write article
+			Write article (Use [...] to seperate abstract)
 		</div>
 		<form action="" method="post">
 			<div>
 				<input maxlength="80" id="titleText" name="title" value="<%=title%>" type="text" />
 			</div>
-			<div id="editorframe">
+			<div id="editor_box">
 				<div id="editor">
 					<jsp:include page="editor.jsp"></jsp:include>
 				</div>

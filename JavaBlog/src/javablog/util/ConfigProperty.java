@@ -9,7 +9,7 @@ public class ConfigProperty {
 	public static final byte STATUS_PENDING = 2;
 	public static final byte STATUS_DRAFT = 3;
 	public static final byte STATUS_READ = 0;// 消息已读
-	public static final byte STATUS_UNREAD = 2;// 消息未读
+	public static final byte STATUS_UNREAD = 1;// 消息未读
 	public static final byte ID_ROLE = 0;
 	public static final byte ID_USER = 1;
 	public static final byte ID_CATEGORY = 2;

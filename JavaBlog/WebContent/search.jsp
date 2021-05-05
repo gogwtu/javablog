@@ -1,5 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@page import="javablog.util.ConfigProperty"%>
 <%
 	String search = (String) request.getAttribute("search");//获取关键字
 	if(search == null){
@@ -13,7 +12,7 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/blog.css" />
-		<title>Search&nbsp;result&nbsp;-&nbsp;<%=ConfigProperty.website_name %></title>
+		<title>Search&nbsp;results&nbsp;-&nbsp;LeftGeek</title>
 	</head>
 	<body onload="scrollInit();">
 		<div id="header">
@@ -24,9 +23,7 @@
 		<div id="container">
 			<div id="main">
 			<div id="main_div">
-				<h2 class="headtitle">
-					Search result for &ldquo; <%=search %> &rdquo;
-				</h2>
+				<h2 class="headtitle">Search results for&ldquo;<%=search %>&rdquo;</h2>
 				<jsp:include page="include/articleList.jsp"></jsp:include>
 				<div class="fy">
                     <jsp:include page="include/page.jsp"></jsp:include>

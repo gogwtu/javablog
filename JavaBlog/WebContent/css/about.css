@@ -4,4 +4,15 @@
 }
 .aboutitem div{
 	padding:0px 0px 0px 20px;
+  line-height: 160%;
+}
+
+#about_avatar{
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.about_title{
+  line-height: 100%;
 }

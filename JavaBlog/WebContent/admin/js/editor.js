@@ -342,17 +342,17 @@ function addTag(obj){
 	tagInput.value += obj.innerHTML + ",";
 }
 
-function updateArticle(status, stateChangeFunction){
+function updateArticle(status1, stateChangeFunction){
 	var iframe=document.getElementById("editframe").contentWindow;
 	var editor = iframe.document.getElementById("textarea");
 	var htmlContent = editor.innerHTML;
 	textarea.value = htmlContent;//设置content
 	//设置category
 	var categoryId = document.getElementById("categoryText").value;
-	document.getElementById("statusText").value=status;
+	document.getElementById("statusText").value=status1;
 	//设置tag
 	var tags = document.getElementById("tagText").value;
-	document.getElementById("statusText").value=status;
+	document.getElementById("statusText").value=status1;
 	var articleId = document.getElementById("articleIdText").value;
 	var title = document.getElementById("titleText").value;
 	var content = textarea.value;
@@ -373,7 +373,7 @@ function updateArticle(status, stateChangeFunction){
 			+ "&content=" + encodeURIComponent(content)
 			+ "&categoryId=" + categoryId
 			+ "&tag=" + tags
-			+ "&status="+status);
+			+ "&status="+status1);
 	
 	function save() {
 		if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {

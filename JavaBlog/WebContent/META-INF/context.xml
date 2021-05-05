@@ -2,15 +2,15 @@
 <Context>
     <WatchedResource>WEB-INF/web.xml</WatchedResource>
     <Resource
-        name="jdbc/javablog"
+        name="jdbc/lefthacker"
         auth="Container"
         type="javax.sql.DataSource"
         maxActive="100"
         maxIdle="30"
         maxWait="1000"
-        username="javablogadmin"
-        password="javablogadmin2014"
+        username="lefthackeradmin"
+        password="lefthackeradmin@)@!@MYSQL"
         driverClassName="com.mysql.jdbc.Driver"
-        url="jdbc:mysql://localhost:3306/javablog?characterEncoding=UTF-8"
+        url="jdbc:mysql://localhost:3306/lefthacker?characterEncoding=UTF-8"
         description="DB Connection"/>
 </Context>

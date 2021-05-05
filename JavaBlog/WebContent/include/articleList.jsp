@@ -23,13 +23,15 @@ javablog.bean.ArticleBean,javablog.bean.ArticleBeanBo,javablog.bean.CategoryBean
 						"SELECT tag_id FROM article_tags WHERE article_id=" + ab.getArticleId(),
 						null, null);
 				ArrayList<TagBean> altb = tbb.getTags(0);
-				color = "color_" + (int)(Math.random() * 4 + 1);
+        int day = Integer.valueOf(sdf.format(ab.getDate()).substring(8, 10));
+				//color = "color_" + (int)(Math.random() * 4 + 1);
+        color = "color_" + (day % 4);//4种颜色循环使用
 %>
 <div class="articlebox">
 	<div class="headline">
 		<div class="date <%=color %>">
 			<p class="year"><%=sdf.format(ab.getDate()).substring(2, 7)%></p>
-			<p class="day"><%=sdf.format(ab.getDate()).substring(8, 10)%></p>
+			<p class="day"><%=day%></p>
 		</div>
 		<div class="title">
 			<h2 class="posttitle">
@@ -60,11 +62,11 @@ javablog.bean.ArticleBean,javablog.bean.ArticleBeanBo,javablog.bean.CategoryBean
 					Posted by
 				</div>
 				<div class="author">
-					<a href="author/<%=ub.getUserId()%>/"><%=ub.getName()%></a>
+					<a href="author/<%=ub.getUserId()%>/" title="View more articles of <%=ub.getName() %>"><%=ub.getName()%></a>
 				</div>
 			</div>
-			<div class="right">
-				<img alt="" class="avatar" src="<%=ub.getAvatar()%>" />
+			<div class="right avatar">
+				<img alt="" src="<%=ub.getAvatar()%>" />
 			</div>
 		</div>
 	</div>

@@ -11,11 +11,11 @@ MessageList.prototype.setReceiverId=function(receiverId){
 MessageList.prototype.getReceiverId=function(){
 	return this.receiverId;
 };
-MessageList.prototype.setStatus=function(status){
-	this.status=status;
+MessageList.prototype.setStatus=function(status1){
+	this.status1=status1;
 };
 MessageList.prototype.getStatus=function(){
-	return this.status;	
+	return this.status1;	
 };
 MessageList.prototype.setPageNow=function(pageNow){
 	this.pageNow=pageNow;
@@ -68,14 +68,14 @@ MessageList.prototype.sort=function(attribute){
 	}
 	this.loadData();
 };
-MessageList.prototype.filter = function(status){
-	this.status = status;
+MessageList.prototype.filter = function(status1){
+	this.status1 = status1;
 	this.loadData();
 };
 MessageList.prototype.getMessageList=function(){
 	var url="admin/MessageList?senderId=" + this.senderId
 			+ "&receiverId="+this.receiverId
-			+ "&status="+this.status
+			+ "&status="+this.status1
 			+ "&pageNow="+this.pageNow
 			+ "&attribute="+this.attribute
 			+ "&order="+this.order
@@ -92,13 +92,14 @@ MessageList.prototype.showToolBar = function(){
 
 function newMessage(){
 	var title="发送消息";
-	var html="<label>姓名</label><input type='text' id='name'/><br/>" +
+	var selectuser = document.getElementById('userIdList');
+	var html="<label>姓名</label>"+ selectuser.innerHTML +"<br/>" +
 			"<label>内容</label><input type='text' id='inputtext'/>";
 	inputBox(title,html,'addMessage()');
 }
 
 function addMessage(){     
-	var receiverId=document.getElementById("receiverId").value;
+	var receiverId=document.getElementById("userIdText").value;
 	var content=document.getElementById("inputtext").value;
 	if(name.lenth==0){
 		return false;

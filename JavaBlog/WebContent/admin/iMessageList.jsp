@@ -43,8 +43,8 @@
         <link rel="stylesheet" type="text/css" href="admin/css/admin.css">
         <script type="text/javascript">
             var messageList=new MessageList();
-            messageList.changeStatus=function(status){
-                changeStatus('select',<%=ConfigProperty.ID_MESSAGE %>,status);
+            messageList.changeStatus=function(status1){
+                changeStatus('select',<%=ConfigProperty.ID_MESSAGE %>,status1);
             };
             messageList.deleteData=function(){
                 delData('select',<%=ConfigProperty.ID_MESSAGE %>);

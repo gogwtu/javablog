@@ -16,8 +16,9 @@
 	<li class="comment<%=uid %>" name="comment<%=cb.getCommentId() %>">
 		<div class="userinfo">
 			<div class="name">
+        <% if (cb.getUrl().length() > 0){%>
 				<a href="<%=cb.getUrl()%>" target="blank"><%=cb.getName()%></a>
-			</div>
+        <%} else {%><%=cb.getName()%><%}%></div>
 			<div class="avatar">
 				<img src="<%=cb.getEmail()%>" alt="avatar" />
 			</div>
@@ -30,8 +31,7 @@
 				</div>
 			</div>
 			<div class="content">
-				<%=cb.getContent()%>
-			</div>
+				<%=cb.getContent()%></div>
 		</div>
 	</li>
 	<%

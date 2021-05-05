@@ -1,9 +1,9 @@
 function ResourceList(){}
-ResourceList.prototype.setStatus=function(status){
-	this.status=status;
+ResourceList.prototype.setStatus=function(status1){
+	this.status1=status1;
 };
 ResourceList.prototype.getStatus=function(){
-	return this.status;	
+	return this.status1;	
 };
 ResourceList.prototype.setPageNow=function(pageNow){
 	this.pageNow=pageNow;
@@ -50,12 +50,12 @@ ResourceList.prototype.sort=function(attribute){
 	}
 	this.loadData();
 };
-ResourceList.prototype.filter = function(status){
-	this.status = status;
+ResourceList.prototype.filter = function(status1){
+	this.status1 = status1;
 	this.loadData();
 };
 ResourceList.prototype.getResourceList=function(){
-	var url="admin/ResourceList?status="+this.status+"&pageNow="+this.pageNow+"&attribute="+this.attribute+"&order="+this.order;
+	var url="admin/ResourceList?status="+this.status1+"&pageNow="+this.pageNow+"&attribute="+this.attribute+"&order="+this.order;
 	window.location.href=url;
 };
 ResourceList.prototype.loadData=function(){

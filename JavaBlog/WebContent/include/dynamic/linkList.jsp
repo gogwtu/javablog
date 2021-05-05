@@ -14,7 +14,7 @@
 			LinkBean lb = al.get(i);
  %>
 	<li>
-		<a href="<%=lb.getUrl() %>"><%=lb.getName() %></a>
+    <a href="<%=lb.getUrl() %>" title="<%=lb.getUrl()%>" target="blank"><%=lb.getName() %></a>
 	</li>
 	<%
 		}

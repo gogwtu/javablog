@@ -53,7 +53,7 @@ function selectAll(value,name) {
 	}
 }
 
-function changeStatus(name,type,status){
+function changeStatus(name,type,status1){
 	var ro = document.getElementsByName(name);
 	if (ro.length == 0) {
 		return false;
@@ -76,7 +76,7 @@ function changeStatus(name,type,status){
     xmlHttp.onreadystatechange=callback;
     xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded;charset=UTF-8");
 	xmlHttp.send("type=" + type
-			+"&status=" + status
+			+"&status=" + status1
 			+"&id=" + id);
     function callback()
     {

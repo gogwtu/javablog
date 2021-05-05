@@ -1,9 +1,9 @@
 function LogList(){}
-LogList.prototype.setStatus=function(status){
-	this.status=status;
+LogList.prototype.setStatus=function(status1){
+	this.status1=status1;
 };
 LogList.prototype.getStatus=function(){
-	return this.status;	
+	return this.status1;	
 };
 LogList.prototype.setPageNow=function(pageNow){
 	this.pageNow=pageNow;
@@ -50,12 +50,12 @@ LogList.prototype.sort=function(attribute){
 	}
 	this.loadData();
 };
-LogList.prototype.filter = function(status){
-	this.status = status;
+LogList.prototype.filter = function(status1){
+	this.status1 = status1;
 	this.loadData();
 };
 LogList.prototype.getLogList=function(){
-	var url="admin/LogList?status="+this.status+"&pageNow="+this.pageNow+"&attribute="+this.attribute+"&order="+this.order;
+	var url="admin/LogList?status="+this.status1+"&pageNow="+this.pageNow+"&attribute="+this.attribute+"&order="+this.order;
 	window.location.href=url;
 };
 LogList.prototype.loadData=function(){

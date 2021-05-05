@@ -9,5 +9,5 @@
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="cache-control" content="no-cache" />
 <meta name="robots" content="none" />
-<meta name="author" content="javablog" />
+<meta name="author" content="leftgeek.com" />
 <link rel="icon" type="image/png" id="favicon" href="images/logo.png"/>

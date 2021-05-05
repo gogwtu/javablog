@@ -80,6 +80,8 @@ public class MessageList extends HttpServlet {
 						senderId = Integer.parseInt(userIdText);
 					} else {// 管理所有消息
 						flag = false;
+						senderId = 0;
+						receiverId = 0;
 						UserBeanBo ubb = new UserBeanBo(connection);
 						UserBean ub = ubb.getUser(Integer.parseInt(userIdText));
 						if (ub != null && ub.getStatus() == ConfigProperty.STATUS_NORMAL){
@@ -96,7 +98,7 @@ public class MessageList extends HttpServlet {
 					if (flag){
 						MessageBeanBo mbb = new MessageBeanBo(connection);
 						mbb.setPageSize(ConfigProperty.admin_message_page_size);
-						mbb.setFilter(senderId, receiverId, status, attribute, order);
+						mbb.setFilter(status, senderId, receiverId, attribute, order);
 						ArrayList<MessageBean> al = mbb.getMessages(pageNow);
 			
 						request.setAttribute("messageList", al);
@@ -109,6 +111,11 @@ public class MessageList extends HttpServlet {
 						request.setAttribute("order", order);
 						request.setAttribute("status", status + "");
 						request.setAttribute("type", type);
+						
+						//设置用户列表,直接允许全部状态的用户接收信息
+						UserBeanBo ubb = new UserBeanBo(connection);
+						ArrayList<UserBean> ubal = ubb.getUsers(0);
+						request.setAttribute("userList", ubal);
 						
 						mbb.closeConnection();
 					}
@@ -149,8 +156,8 @@ public class MessageList extends HttpServlet {
 
 	private boolean isValidStatus(int status){
 		boolean result = false;
-		if (status == ConfigProperty.STATUS_NORMAL
-				|| status == ConfigProperty.STATUS_TRASH){
+		if (status == ConfigProperty.STATUS_READ
+				|| status == ConfigProperty.STATUS_UNREAD){
 			result = true;
 		}
 		return result;

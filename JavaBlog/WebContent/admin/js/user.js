@@ -5,11 +5,11 @@ UserList.prototype.setRoleId=function(roleId){
 UserList.prototype.getRoleId=function(){
 	return this.roleId;	
 };
-UserList.prototype.setStatus=function(status){
-	this.status=status;
+UserList.prototype.setStatus=function(status1){
+	this.status1=status1;
 };
 UserList.prototype.getStatus=function(){
-	return this.status;	
+	return this.status1;	
 };
 UserList.prototype.setPageNow=function(pageNow){
 	this.pageNow=pageNow;
@@ -44,12 +44,12 @@ UserList.prototype.sort=function(attribute){
 	}
 	this.loadData();
 };
-UserList.prototype.filter = function(status){
-	this.status = status;
+UserList.prototype.filter = function(status1){
+	this.status1 = status1;
 	this.loadData();
 };
 UserList.prototype.getUserList=function(){
-	var url="admin/UserList?roleId="+this.roleId+"&pageNow="+this.pageNow+"&status="+this.status+"&attribute="+this.attribute+"&order="+this.order;
+	var url="admin/UserList?roleId="+this.roleId+"&pageNow="+this.pageNow+"&status="+this.status1+"&attribute="+this.attribute+"&order="+this.order;
 	window.location.href=url;
 };
 UserList.prototype.loadData=function(){

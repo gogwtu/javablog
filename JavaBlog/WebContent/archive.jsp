@@ -1,6 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@page import="java.text.SimpleDateFormat,javablog.bean.ArticleBean,javablog.bean.ArticleBeanBo"%>
-<%@page import="javablog.util.ConfigProperty"%>
 <%
 	ArrayList<ArticleBean> al = (ArrayList<ArticleBean>) request.getAttribute("articleList");
 	if (al == null) {
@@ -16,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/blog.css" />
 		<link rel="stylesheet" type="text/css" href="css/archive.css" />
-		<title>Archives&nbsp;-&nbsp;<%=ConfigProperty.website_name %></title>
+		<title>Archives&nbsp;-&nbsp;LeftGeek</title>
 	</head>
 	<body onload="scrollInit();">
 		<div id="header">
@@ -27,11 +26,9 @@
 		<div id="container">
 			<div id="main">
 			<div id="main_div">
-				<h2 class="headtitle">
-					Archive
-				</h2>
+				<h2 class="headtitle">Archive</h2>
 				<%
-					for (int i = 0; i < al.size(); i++) {
+					for (int i = 0; i < al.size();) {
 						ArticleBean ab = al.get(i);
 						String date = sdf.format(ab.getDate()).substring(0, 7);
 				%>
@@ -41,17 +38,17 @@
 						<a href="article/<%=ab.getArticleId()%>/"><%=ab.getTitle()%></a>
 					</li>
 					<%
-						while ((++i) < al.size()){
-							ab = al.get(i);
-							if (sdf.format(ab.getDate()).contains(date)){
-						%>
-							<li>
-								<a href="article/<%=ab.getArticleId()%>/"><%=ab.getTitle()%></a>
-							</li>
-						<%
-							} else {
-								break;
-							}
+            while ((++i) < al.size()){
+              ab = al.get(i);
+              if (sdf.format(ab.getDate()).contains(date)){
+					%>
+					<li>
+						<a href="article/<%=ab.getArticleId()%>/"><%=ab.getTitle()%></a>
+					</li>
+					<%
+              } else {
+                break;
+              }
 						}
 					%>
 				</ol>

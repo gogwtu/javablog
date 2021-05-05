@@ -4,8 +4,9 @@
 }
 
 .project_title{
-	
+  line-height: 100%;	
 }
 .project_content{
 	padding: 0px 0px 0px 20px;
+  line-height: 160%;
 }

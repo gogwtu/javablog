@@ -1,9 +1,9 @@
 function TagList(){}
-TagList.prototype.setStatus=function(status){
-	this.status=status;
+TagList.prototype.setStatus=function(status1){
+	this.status1=status1;
 };
 TagList.prototype.getStatus=function(){
-	return this.status;	
+	return this.status1;	
 };
 TagList.prototype.setPageNow=function(pageNow){
 	this.pageNow=pageNow;
@@ -50,12 +50,12 @@ TagList.prototype.sort=function(attribute){
 	}
 	this.loadData();
 };
-TagList.prototype.filter = function(status){
-	this.status = status;
+TagList.prototype.filter = function(status1){
+	this.status1 = status1;
 	this.loadData();
 };
 TagList.prototype.getTagList=function(){
-	var url="admin/TagList?pageNow="+this.pageNow+"&status="+this.status+"&attribute="+this.attribute+"&order="+this.order;
+	var url="admin/TagList?pageNow="+this.pageNow+"&status="+this.status1+"&attribute="+this.attribute+"&order="+this.order;
 	window.location.href=url;
 };
 TagList.prototype.loadData=function(){

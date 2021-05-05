@@ -20,6 +20,7 @@
 	margin: 0px;
 	padding: 5px;
 	clear: both;
+  line-height: 160%;
 }
 
 .avatar {
@@ -28,17 +29,19 @@
 }
 
 .title {
+  height: 60px;
 	float: left;
 	width: 480px;
-	margin: 0px;
+	margin: -5px 0px 0px 0px;
 	padding: 0px 0px 0px 5px;
 }
 
 .posttitle {
-	margin: 0px;
-	font-size: 17px;
+	margin: 5px 0px 5px 0px;
+	font-size: 18px;
 	color: #04B1F2;
-	height: 30px;
+	height: 20px;
+  line-height: 100%;
 }
 
 .posttitle a,.posttitle a:link,.posttitle a:active,.posttitle a:visited{
@@ -46,9 +49,15 @@
 	text-decoration: none;
 }
 
+.posttitle a:hover{
+	text-decoration: underline;
+}
+
 .category {
-	height: 30px;
+  margin: 5px 0px 5px 0px;
+	height: 20px;
 	font-size: 15px;
+  line-height: 100%;
 }
 
 .category a,.category a:link,.category a:active,.category a:visited {
@@ -61,6 +70,7 @@
 }
 .category_info{
 	height: 30px;
+  margin-right: 10px;
 	overflow: hidden;
 	line-height: 28px;
 }
@@ -83,21 +93,22 @@
 	box-shadow: -3px 0px 2px #888888;
 	margin: -5px 0px 0px -30px;
 	padding: 0px;
+  text-align: center;
 }
 
 .date .year {
 	color: #FFFFFF;
 	font-size: 15px;
-	padding: 3px 0px 0px 3px;
-	margin: 0;
+	margin: 5px 0px 4px 0px;
+  line-height: 100%;
 }
 
 .date .day {
 	color: #FFFFFF;
 	font-size: 28px;
 	font-weight: bold;
-	padding: 0px 0px 0px 5px;
-	margin: 0;
+	margin: 5px 0px 5px 0px;
+  line-height: 120%;
 }
 
 .postauthor {
@@ -113,9 +124,9 @@
 
 .postby {
 	font-size: 14px;
-	font-style: italic;
 	color: #333333;
-	padding: 5px 0px 2px 0px;
+	padding: 5px 0px 5px 0px;
+  height: 18px;
 }
 
 .author {
@@ -129,7 +140,6 @@
 
 .state{
 	text-align: center;
-	font-weight: bold;
 	color: red;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -146,7 +156,13 @@
 }
 
 #relatedArticle ul{
-	padding-left: 10px;	
+	padding: 5px 0px 5px 10px;	
+}
+
+#relatedArticle li{
+	display:list-item;
+	list-style-type:decimal;
+  margin: 2px 0px 2px 20px;
 }
 
 #sidebar {
@@ -171,14 +187,15 @@
 
 .boxtitle {
 	margin: 0px;
-	padding: 5px 5px 0px 10px;
+	padding: 5px 8px 5px 7px;
 	background: #343638;
-	height: 30px;
+	height: 24px;
 	width: 295px;
 	box-shadow: 0px 0px 5px #888888;
 	color: white;
 	font-weight: bold;
 	font-size: 18px;
+  line-height: 130%;
 }
 
 .boxcontent ul {
@@ -186,19 +203,46 @@
 }
 
 .boxcontent li {
+  word-break: break-all;
 	word-wrap: break-word;
 	line-height: 150%;
 	font-size: 15px;
 	border-bottom: 1px #E7E7E7 dotted;
 	padding: 3px 3px 3px 20px;
-	background: url('../images/tag.png') no-repeat;
-	background-position: 0px 6px;
+}
+
+.category_list li{
+	background: url('../images/category.png') no-repeat;
+	background-position: 2px 8px;
+  background-size: 12px 12px;
+}
+
+.post_list li{
+	background: url('../images/post.png') no-repeat;
+	background-position: 2px 8px;
+  background-size: 12px 12px;
+}
+
+.comment_list li{
+	background: url('../images/comment.png') no-repeat;
+	background-position: 2px 8px;
+  background-size: 12px 12px;
+}
+
+.link_list li{
+	background: url('../images/link.png') no-repeat;
+	background-position: 2px 8px;
+  background-size: 12px 12px;
+}
+
+#toolBox{
+  padding: 5px 0px 5px 0px;
 }
 
 #searchBox {
-	width: 290px;
+	width: 288px;
 	height: 34px;
-	padding: 5px;
+	padding: 6px;
 }
 
 #searchdiv {
@@ -217,6 +261,7 @@
 #searchText {
 	height: 28px;
 	font-size: 14px;
+	font-style: italic;
 	line-height: 28px;
 	width: 240px;
 	color: #666666;
@@ -264,8 +309,11 @@
 	border: 1px solid #BCBCBC;
 	border-radius: 3px;
 	background: #666666;
-	margin: 2px;
+	margin: 5px 2px 5px 2px;
 	padding: 2px 3px 2px 3px;
+  font-size: 14px;
+  height: 14px;
+  line-height: 100%;
 }
 .tag_link:hover{
 	background: #333333;
@@ -322,19 +370,32 @@
 	color: #666666;
 	width: 640px;
 	height: 30px;
-	margin: 5px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 	padding: 5px 0px 5px 10px;
 }
 
+.color_0{
+	background-color: #F06A67;
+}
 .color_1{
-	background-color: #FF4719;
+	background-color: #F99E2B;
 }
 .color_2{
-	background-color: #FFE019;
+	background-color: #5FABE5;
 }
 .color_3{
-	background-color: #19A3FF;
+	background-color: #90C24F;
 }
+
 .color_4{
-	background-color: #75D119;
+	background-color: #DF5A37;
+}
+.color_5{
+	background-color: #F6C646;
+}
+.color_6{
+	background-color: #50B1B3;
+}
+.color_7{
+	background-color: #87C15E;
 }

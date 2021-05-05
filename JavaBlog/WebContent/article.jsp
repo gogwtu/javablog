@@ -2,14 +2,15 @@
 <%@page import="java.text.SimpleDateFormat,javablog.bean.ArticleBean
 ,javablog.bean.CategoryBean,javablog.bean.TagBean
 ,javablog.bean.UserBean,javablog.bean.MetaModel"%>
-<%@page import="javablog.util.ConfigProperty"%>
 <%
     ArticleBean ab = (ArticleBean) request.getAttribute("article");
 	if (ab == null) {
 		response.sendRedirect("error/");
 	} else {
 		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-		String color = "color_" + (int)(Math.random() * 4 + 1);//random date color
+    int day = Integer.valueOf(sdf.format(ab.getDate()).substring(8, 10));
+		//String color = "color_" + (int)(Math.random() * 4 + 1);//random date color
+		String color = "color_" + (day % 4);//4种颜色循环使用
 		CategoryBean category = (CategoryBean)request.getAttribute("category");
 		UserBean author = (UserBean)request.getAttribute("author");
 		ArrayList<MetaModel> almm = (ArrayList<MetaModel>)request.getAttribute("relatedArticleList");
@@ -26,7 +27,7 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/blog.css" />
 		<link rel="stylesheet" type="text/css" href="css/comment.css" />
-		<title><%=ab.getTitle()%>&nbsp;-&nbsp;<%=ConfigProperty.website_name %></title>
+		<title><%=ab.getTitle()%>&nbsp;-&nbsp;LeftGeek</title>
 	</head>
 	<body onload="scrollInit();">
 		<div id="header">
@@ -38,18 +39,16 @@
 			<div id="main">
 			<div id="main_div">
 				<h2 class="headtitle">
-					<%=ab.getTitle() %>
+					Article
 				</h2>
 				<div class="articlebox">
 					<div class="headline">
 						<div class="date <%=color %>">
 							<p class="year"><%=sdf.format(ab.getDate()).substring(2, 7)%></p>
-							<p class="day"><%=sdf.format(ab.getDate()).substring(8, 10)%></p>
+							<p class="day"><%=day%></p>
 						</div>
 						<div class="title">
-							<h2 class="posttitle">
-								<%=ab.getTitle()%>
-							</h2>
+							<h2 class="posttitle"><%=ab.getTitle()%></h2>
 							<div class="category">
 								<div class="category_info left">
 								Category:&nbsp;<a href="category/<%=category.getCategoryId() %>/"><%=category.getName()%></a>
@@ -75,18 +74,18 @@
 									Posted by
 								</div>
 								<div class="author">
-									<a href="author/<%=author.getUserId() %>/"><%=author.getName() %></a>
+									<a href="author/<%=author.getUserId() %>/" title="View more articles of <%=author.getName() %>"><%=author.getName() %></a>
 								</div>
 							</div>
-							<div class="right">
-								<img alt="" class="avatar" src="<%=author.getAvatar()%>" />
+							<div class="right avatar">
+								<img alt="" src="<%=author.getAvatar()%>" />
 							</div>
 						</div>
 					</div>
 					<div class="blogcontent"><%=ab.getContent().replace("[...]","") %></div>
 				</div>
 				<div class="state">
-					转载本站文章，需注明出处
+					(转载本站文章，请注明出处)
 				</div>
 				<div id="otherarticle">
 					<span class="left">&laquo;
@@ -156,9 +155,6 @@
 				<jsp:include page="include/footer.jsp"></jsp:include>
 			</div>
 		</div>
-		<!-- JiaThis Button BEGIN -->
-		<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?uid=1334710971143378&move=0" charset="utf-8"></script>
-		<!-- JiaThis Button END -->
 	</body>
 </html>
 <%

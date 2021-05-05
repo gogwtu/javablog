@@ -1,5 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@page import="javablog.util.ConfigProperty"%>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -7,7 +6,7 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/blog.css" />
-		<title>Home&nbsp;-&nbsp;<%=ConfigProperty.website_name %></title>
+		<title>Abstracts&nbsp;-&nbsp;LeftGeek</title>
 	</head>
 	<body onload="scrollInit();">
 		<div id="header">
@@ -18,9 +17,7 @@
 		<div id="container">
 			<div id="main">
 			<div id="main_div">
-				<h2 class="headtitle">
-					Home
-				</h2>
+				<h2 class="headtitle">Abstracts</h2>
 				<jsp:include page="include/articleList.jsp"></jsp:include>
 				<div class="fy">
 					<jsp:include page="include/page.jsp"></jsp:include>

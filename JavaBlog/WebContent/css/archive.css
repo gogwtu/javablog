@@ -1,16 +1,18 @@
 @CHARSET "UTF-8";
 
 .archivedate{
-padding:5px;
-margin:0px;
+	padding:5px 0px 5px 10px; 
+	margin:0px;
+	color: #333333;
 }
 .archive{
-margin:5px 0px 0px 50px;
-padding:0px;
+	margin:5px 0px 0px 50px;
+	padding:0px;
 }
 .archive li{
 	display:list-item;
 	list-style-type:decimal;
+	color: #333333;
 }
 .archive a,
 .archive a:link,

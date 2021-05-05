@@ -1,9 +1,9 @@
 function LinkList(){}
-LinkList.prototype.setStatus=function(status){
-	this.status=status;
+LinkList.prototype.setStatus=function(status1){
+	this.status1=status1;
 };
 LinkList.prototype.getStatus=function(){
-	return this.status;	
+	return this.status1;	
 };
 LinkList.prototype.setPageNow=function(pageNow){
 	this.pageNow=pageNow;
@@ -38,12 +38,12 @@ LinkList.prototype.sort=function(attribute){
 	}
 	this.loadData();
 };
-LinkList.prototype.filter = function(status){
-	this.status = status;
+LinkList.prototype.filter = function(status1){
+	this.status1 = status1;
 	this.loadData();
 };
 LinkList.prototype.getLinkList=function(){
-	var url="admin/LinkList?pageNow="+this.pageNow+"&status="+this.status+"&attribute="+this.attribute+"&order="+this.order;
+	var url="admin/LinkList?pageNow="+this.pageNow+"&status="+this.status1+"&attribute="+this.attribute+"&order="+this.order;
 	window.location.href=url;
 };
 LinkList.prototype.loadData=function(){
@@ -95,6 +95,6 @@ function modiLink(num){
 	var name=ro.cells[1].innerHTML;
 	var url=ro.cells[2].innerHTML;
 	var title="修改链接";
-	var html="<label>名称</label><input type='text' value='"+name+"' id='name'/><br><label>Url</label><input type='text' value='"+url+"' id='url'/>";
+	var html="<label>名称</label><input type='text' value='"+name+"' id='name'/><br/><label>Url</label><input type='text' value='"+url+"' id='url'/>";
 	inputBox(title,html,'addLink()');
 }

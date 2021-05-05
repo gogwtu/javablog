@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<jsp:include page="admin-base.jsp"></jsp:include>
-		<title>管理员登录</title>
+		<title>Login</title>
 		<link rel="stylesheet" type="text/css" href="admin/css/admin.css">
 		<link rel="stylesheet" type="text/css" href="admin/css/login.css">
 		<script type="text/javascript" src="admin/js/admin.js"></script>

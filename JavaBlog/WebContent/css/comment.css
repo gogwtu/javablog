@@ -67,6 +67,7 @@
 	border-radius: 5px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	position: relative;
+  line-height: 160%;
 }
 .content:before {
 	content: "";
@@ -97,9 +98,9 @@
 	padding: 0px 13px 0px 10px;
 }
 .input {
-	width: 300px;
+	width: 285px;
 	height: 25px;
-	padding: 0px;
+	padding: 0px 5px 0px 5px;
 	border: 1px solid #BCBCBC;
 	border-right: 0px;
 	margin: 0px;
@@ -109,7 +110,7 @@
 }
 
 .label {
-	width: 255px;
+	width: 260px;
 	display: block;
 	text-align: left;
 	color: #666666;
@@ -122,6 +123,7 @@
 	border-left: 0px;
 	border-radius: 0px 3px 3px 0px;
 }
+
 
 #newinfo div {
 	height: 27px;
@@ -136,9 +138,10 @@
 #content {
 	min-height: 150px;
 	max-height: 300px;
-	width: 560px;
+	width: 550px;
 	margin: 0px;
-	padding: 0px;
+	padding: 5px;
+	font-size: 14px;
 	resize: vertical;
 	overflow-y: auto;
 	border: 1px solid #BCBCBC;

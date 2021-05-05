@@ -29,7 +29,7 @@ function showTip(message,tipId) {
 
 function reply(username){
 	window.location.hash = "#comment";
-	document.getElementById("content").value="Reply to "+username+":";
+	document.getElementById("content").value="Reply to "+username+": ";
 }
 
 function addComment(articleId) {

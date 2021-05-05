@@ -160,10 +160,9 @@ CREATE TABLE `resources` (
 
 /*
 留言表，每个留言都有相应的id，发送方id，接收方id，内容，时间，状态
-状态为取值范围为：0，1，2
-0：正常
-1：待审核
-2：回收站
+状态为取值范围为：0，1
+0：已读
+1：未读
 */
 CREATE TABLE `messages` (
   `message_id` int(11) NOT NULL AUTO_INCREMENT,

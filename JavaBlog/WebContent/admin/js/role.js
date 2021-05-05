@@ -1,9 +1,9 @@
 function RoleList(){}
-RoleList.prototype.setStatus=function(status){
-	this.status=status;
+RoleList.prototype.setStatus=function(status1){
+	this.status1=status1;
 };
 RoleList.prototype.getStatus=function(){
-	return this.status;	
+	return this.status1;	
 };
 RoleList.prototype.setPageNow=function(pageNow){
 	this.pageNow=pageNow;
@@ -50,12 +50,12 @@ RoleList.prototype.sort=function(attribute){
 	}
 	this.loadData();
 };
-RoleList.prototype.filter = function(status){
-	this.status = status;
+RoleList.prototype.filter = function(status1){
+	this.status1 = status1;
 	this.loadData();
 };
 RoleList.prototype.getRoleList=function(){
-	var url="admin/RoleList?status="+this.status+"&pageNow="+this.pageNow+"&attribute="+this.attribute+"&order="+this.order;
+	var url="admin/RoleList?status="+this.status1+"&pageNow="+this.pageNow+"&attribute="+this.attribute+"&order="+this.order;
 	window.location.href=url;
 };
 RoleList.prototype.loadData=function(){
