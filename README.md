@@ -1,6 +1,6 @@
 javablog
 ========
-#ayugeak的Github帐号早已无法登录，故javablog转移到当前的gogwtu帐号下来维护  
+#ayugeak的Github帐号早已无法登录，故javablog转移到当前的leftgeek帐号下来维护  
 
 A blog written in java, which is also the source code of my blog "http://leftgeek.com/"
 
